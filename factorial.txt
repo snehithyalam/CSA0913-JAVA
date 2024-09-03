@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class factrec {
+    public static int factorial(int nu)
+    {
+        if(nu==0)
+        {
+            return 1;
+        }
+        else
+        {
+            return nu*factorial(nu-1);
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        System.out.println(factorial(n));
+    }
+    
+}

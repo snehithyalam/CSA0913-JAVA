@@ -1,0 +1,21 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+import java.util.Scanner;
+
+public class oddeven {
+   public oddeven() {
+   }
+
+   public static void main(String[] var0) {
+      Scanner var1 = new Scanner(System.in);
+      System.out.println("entre the value 1:");
+      int var2 = var1.nextInt();
+      if (var2 % 2 == 0) {
+         System.out.println("even number");
+      } else if (var2 % 2 == 1) {
+         System.out.println("odd number");
+      } else {
+         System.out.println("invalid input");
+      }
+
+   }
+}

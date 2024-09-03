@@ -1,0 +1,20 @@
+
+import java.util.Scanner;
+
+public class fib {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int t1=0;
+        int t2=1;
+        int terms=sc.nextInt();
+        System.out.print(t1);
+        for(int i=1;i<terms;i++)
+        {
+            System.out.print(","+t2);
+            int next=t1+t2;
+            t1=t2;
+            t2=next;
+        }
+        sc.close();
+    } 
+}

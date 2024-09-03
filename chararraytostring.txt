@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class chararraytostring {
+   public chararraytostring() {
+   }
+
+   public static void main(String[] var0) {
+      Scanner var1 = new Scanner(System.in);
+      String var2 = var1.nextLine();
+      String var3 = " ";
+
+      for(int var4 = var2.length() - 1; var4 >= 0; --var4) {
+         var3 = var3 + var2.charAt(var4);
+      }
+
+      System.out.println(var3);
+      var1.close();
+   }
+}

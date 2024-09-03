@@ -1,0 +1,70 @@
+// Parent class Menu
+class Menu {
+    protected String name;
+    protected double price;
+
+    public Menu(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    public void displayMenu() {
+        System.out.println("Item: " + name + ", Price: $" + price);
+    }
+}
+
+// Child class Appetizer
+class Appetizer extends Menu {
+    private String appetizerType;
+
+    public Appetizer(String name, double price, String appetizerType) {
+        super(name, price);
+        this.appetizerType = appetizerType;
+    }
+
+    public void orderAppetizer() {
+        System.out.println("Ordering the appetizer: " + name + " (" + appetizerType + ")");
+    }
+
+    public void serveAppetizer() {
+        System.out.println("Serving the appetizer: " + name);
+    }
+}
+
+// Child class Entree
+class Entree extends Menu {
+    private String entreeType;
+
+    public Entree(String name, double price, String entreeType) {
+        super(name, price);
+        this.entreeType = entreeType;
+    }
+
+    public void orderEntree() {
+        System.out.println("Ordering the entree: " + name + " (" + entreeType + ")");
+    }
+
+    public void serveEntree() {
+        System.out.println("Serving the entree: " + name);
+    }
+}
+
+// Main class to test the restaurant management system
+public class menu1 {
+    public static void main(String[] args) {
+        // Creating Appetizer and Entree objects
+        Appetizer appetizer1 = new Appetizer("Spring Rolls", 5.99, "Vegetarian");
+        Entree entree1 = new Entree("Grilled Chicken", 12.99, "Non-Vegetarian");
+
+        // Displaying menu items
+        appetizer1.displayMenu();
+        entree1.displayMenu();
+
+        // Ordering and serving food
+        appetizer1.orderAppetizer();
+        appetizer1.serveAppetizer();
+
+        entree1.orderEntree();
+        entree1.serveEntree();
+    }
+}
